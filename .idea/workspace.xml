@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BuildServerSettings">
+    <option name="LOGIN" value="" />
+    <option name="SERVER_URL" value="http://buildserver" />
+    <option name="REMEMBER_ME" value="true" />
+    <option name="USE_IDEA_PROXY_SETTINGS" value="true" />
+    <option name="INSPECTIONS_BUILD_TYPE_IDS" />
+    <option name="DUPLICATES_BUILD_TYPE_IDS" />
+    <option name="COVERAGE_SETTINGS" />
+    <option name="TEST_STATUS_ENABLED" value="true" />
+    <option name="TEST_STATUS_SHOW_SUCCESSFUL" value="false" />
+    <option name="ARTIFACTS_BUILD_TYPE_IDS" />
+    <option name="PERFORM_COMMIT_IF_SUCCESSFUL" value="true" />
+    <option name="PERFORM_COMMIT_IF_NO_NEW_FAILED_TESTS" value="false" />
+    <option name="REQUEST_CONFIRMATON" value="false" />
+    <option name="PRE_TESTED_COMMIT" value="true" />
+    <option name="FILTER_BY_STATUS" value="false" />
+    <option name="FILTER_MARKED_AS_FIXED" value="false" />
+    <option name="SHOW_CLOSE_PROMPT" value="true" />
+    <option name="TOOL_WINDOW_SELECTED_CONTENT_INDEX" value="0" />
+    <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b0dbff13-a447-4c66-8c06-99abf8df6dbb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Animation/Animator.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Animation/Animator.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Charts/BarLineChartViewBase.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Charts/BarLineChartViewBase.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Charts/ChartViewBase.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Charts/ChartViewBase.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Charts/PieChartView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Charts/PieChartView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Charts/PieRadarChartViewBase.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Charts/PieRadarChartViewBase.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Components/Legend.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Components/Legend.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Components/YAxis.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Components/YAxis.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Filters/DataApproximator+N.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Filters/DataApproximator+N.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Jobs/AnimatedViewPortJob.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Jobs/AnimatedViewPortJob.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/BarChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/BarChartRenderer.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/BubbleChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/BubbleChartRenderer.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/CandleStickChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/CandleStickChartRenderer.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/HorizontalBarChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/HorizontalBarChartRenderer.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/LegendRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/LegendRenderer.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/LineChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/LineChartRenderer.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/PieChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/PieChartRenderer.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/RadarChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/RadarChartRenderer.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/ScatterChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/ScatterChartRenderer.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/XAxisRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/XAxisRenderer.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/XAxisRendererHorizontalBarChart.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/XAxisRendererHorizontalBarChart.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/XAxisRendererRadarChart.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/XAxisRendererRadarChart.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/YAxisRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/YAxisRenderer.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/YAxisRendererHorizontalBarChart.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/YAxisRendererHorizontalBarChart.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/YAxisRendererRadarChart.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/YAxisRendererRadarChart.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Utils/ChartUtils.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Utils/ChartUtils.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Utils/Platform.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Utils/Platform.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rainride.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/rainride.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rainride.xcworkspace/xcuserdata/bastian.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/rainride.xcworkspace/xcuserdata/bastian.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rainride/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/rainride/AppDelegate.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rainride/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/rainride/Base.lproj/Main.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rainride/MasterViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/rainride/MasterViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rainride/Settings.swift" beforeDir="false" afterPath="$PROJECT_DIR$/rainride/Settings.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rainride/SettingsViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/rainride/SettingsViewController.swift" afterDir="false" />
+    </list>
+    <ignored path="$USER_HOME$/Library/Developer/Xcode/DerivedData/rainride-digtwmfzcqxnsxcazwlgwrftapjy/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_3A98E3CE-E6FB-4551-B4DA-B838CF533F2F" />
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1814820556">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="Podfile" value="1" />
+          <entry key="swift" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Podfile" value="1" />
+          <entry key="Swift" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Podfile" value="20" />
+          <entry key="swift" value="591" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Podfile" value="20" />
+          <entry key="Swift" value="591" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.appcode.build">
+        <counts>
+          <entry key="buildservice" value="8" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rainride/SettingsViewController.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rainride/MasterViewController.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="151" column="35" lean-forward="true" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rainride/WeatherViewController.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1794">
+              <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Podfile" />
+        <option value="$PROJECT_DIR$/rainride/SettingsViewController.swift" />
+        <option value="$PROJECT_DIR$/rainride/MasterViewController.swift" />
+        <option value="$PROJECT_DIR$/rainride/WeatherViewController.swift" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1920" />
+    <option name="height" value="1200" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="Pods" type="1d218c8b:XcodeProjectNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="rainride" type="1d218c8b:XcodeProjectNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="rainride" type="1d218c8b:XcodeProjectNode" />
+              <item name="rainride" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="rainride" type="1d218c8b:XcodeProjectNode" />
+              <item name="watchApp Extension" type="fcab9f18:XcodeViewNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Cidr.FilesView" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="rainride" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="rainride" TARGET_NAME="rainride" CONFIG_NAME="Debug" SCHEME_NAME="rainride" IS_LOCATION_SIMULATION_ALLOWED="true" RUN_TARGET_PROJECT_NAME="rainride" RUN_TARGET_NAME="rainride" MAKE_ACTIVE="TRUE">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0dbff13-a447-4c66-8c06-99abf8df6dbb" name="Default Changelist" comment="" />
+      <created>1537375477770</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1537375477770</updated>
+      <workItem from="1537375481938" duration="1594000" />
+      <workItem from="1537378328712" duration="1559000" />
+      <workItem from="1537382490835" duration="657000" />
+      <workItem from="1537386557630" duration="794000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4604000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18530351" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32944345" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TeamCity" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32920355" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32944345" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/rainride/MasterViewController.swift</url>
+          <line>108</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/rainride/MasterViewController.swift</url>
+          <line>82</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/rainride/MasterViewController.swift</url>
+          <line>80</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Podfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rainride/ExitsViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1642" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/AppCode2018.2/ModuleCache/10A255/4.2/arm64/iphoneos12.0/UIKit.UIApplication/UIKit.UIApplication.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2286">
+          <caret line="598" column="25" selection-start-line="598" selection-start-column="25" selection-end-line="598" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rainride/AppDelegate.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rainride/SpeedViewController.swift">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rainride/SettingsViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache.zip!/ModuleCache/10A255/4.2/arm64/iphoneos12.0/CoreLocation.CLLocationManagerDelegate/CoreLocation.CLLocationManagerDelegate.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rainride/WeatherViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1794">
+          <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rainride/MasterViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="151" column="35" lean-forward="true" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

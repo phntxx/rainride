@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032690EC2152DA8000C6108B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032690EB2152DA8000C6108B /* Settings.swift */; };
 		0341BBD420C862870055BB26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341BBD320C862870055BB26 /* AppDelegate.swift */; };
 		0341BBD720C862870055BB26 /* rainride.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0341BBD520C862870055BB26 /* rainride.xcdatamodeld */; };
 		0341BBD920C862870055BB26 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341BBD820C862870055BB26 /* MasterViewController.swift */; };
@@ -103,6 +104,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		032690EB2152DA8000C6108B /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		0341BBD020C862870055BB26 /* rainride.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rainride.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0341BBD320C862870055BB26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0341BBD620C862870055BB26 /* rainride.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = rainride.xcdatamodel; sourceTree = "<group>"; };
@@ -230,12 +232,13 @@
 				0341BC0820C968340055BB26 /* WeatherViewController.swift */,
 				0341BC0620C869330055BB26 /* ExitsViewController.swift */,
 				0341BC3620C9AF0D0055BB26 /* PinAnnotation.swift */,
+				03794B18214ABB2900D5EA23 /* SettingsViewController.swift */,
 				0341BBDC20C862870055BB26 /* Main.storyboard */,
 				0341BBDF20C862870055BB26 /* Assets.xcassets */,
 				0341BBE120C862870055BB26 /* LaunchScreen.storyboard */,
 				0341BBE420C862870055BB26 /* Info.plist */,
 				0341BBD520C862870055BB26 /* rainride.xcdatamodeld */,
-				03794B18214ABB2900D5EA23 /* SettingsViewController.swift */,
+				032690EB2152DA8000C6108B /* Settings.swift */,
 			);
 			path = rainride;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				TargetAttributes = {
 					0341BBCF20C862870055BB26 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 1000;
 					};
 					0341BBE820C862870055BB26 = {
 						CreatedOnToolsVersion = 9.3.1;
@@ -445,6 +449,7 @@
 					};
 					0341BC1920C980EB0055BB26 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -756,6 +761,7 @@
 				0341BBD720C862870055BB26 /* rainride.xcdatamodeld in Sources */,
 				0341BBD920C862870055BB26 /* MasterViewController.swift in Sources */,
 				0341BC0720C869330055BB26 /* ExitsViewController.swift in Sources */,
+				032690EC2152DA8000C6108B /* Settings.swift in Sources */,
 				0341BC3720C9AF0D0055BB26 /* PinAnnotation.swift in Sources */,
 				03794B19214ABB2900D5EA23 /* SettingsViewController.swift in Sources */,
 			);
@@ -970,7 +976,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.phntxx.rainride;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -990,7 +996,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.phntxx.rainride;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1098,7 +1104,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
@@ -1121,7 +1127,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};

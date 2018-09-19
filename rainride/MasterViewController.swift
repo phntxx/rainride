@@ -16,23 +16,28 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
     @IBOutlet weak var headingLabel: UILabel!
     @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet weak var exitLabel: UILabel!
-    
+
     var token : Int = 0
     var locationManager : CLLocationManager! = CLLocationManager()
+    var currentHeading: String = ""
+
     var restAreaData: [Any] = []
     var exitData: [Any] = []
     var weatherData: NSDictionary = [:]
-    var currentHeading: String = ""
-    
-    var settings: NSDictionary?
+
+    var speedUnit: String = "km/h"
+    var range: Float = 25
+    var temperatureUnit: String = "auto"
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let path = Bundle.main.path(forResource: "root", ofType: "plist") {
-            self.settings = NSDictionary(contentsOfFile: path)
+        if let settings = loadSettings () {
+            self.speedUnit = settings.speedUnit
+            self.range = settings.range
+            self.temperatureUnit = settings.temperatureUnit
         }
-        
+
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
@@ -72,48 +77,26 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
             controller.navigationItem.leftItemsSupplementBackButton = true
         }
     }
-
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         if (token == 0) {
             let locValue : CLLocationCoordinate2D = manager.location!.coordinate
-            
-            if let dict = self.settings {
-                
-                if dict["unit_temperature"] as! String == "0" {
-                    getWeatherData(location: locValue, unit: "us") // Fahrenheit
-                } else if dict["unit_temperature"] as! String == "1" {
-                    getWeatherData(location: locValue, unit: "si") // Celsius
-                }
-                
-                if dict["unit_speed"] as! String == "0" {
-                    let unitFloat = 2.23694
-                    let unitString = "mph"
-                    if (locations[0].speed > 0) {
-                        speedLabel.text = "Speed: \(locations[0].speed * unitFloat) \(unitString)"
-                    }
-                } else if dict["unit_speed"] as! String == "1" {
-                    let unitFloat = 3.6
-                    let unitString = "km/h"
-                    if (locations[0].speed > 0) {
-                        speedLabel.text = "Speed: \(locations[0].speed * unitFloat) \(unitString)"
-                    }
-                }
+            getExitData(location: locValue, distance: (self.range * 1000))
+            getRestAreaData(location: locValue, distance: (self.range * 1000))
 
-                let distance = (dict["distance"] as! Decimal) * 1000
-                getExitData(location: locValue, distance: distance as! Int)
-                getRestAreaData(location: locValue, distance: distance as! Int)
+            if (self.temperatureUnit == "C") {
+                getWeatherData(location: locValue, unit: "si")
+            } else if (self.temperatureUnit == "F") {
+                getWeatherData(location: locValue, unit: "us")
             } else {
-                getExitData(location: locValue, distance: 25000)
-                getRestAreaData(location: locValue, distance: 25000)
                 getWeatherData(location: locValue, unit: "auto")
             }
-            
+
             token = 1
         }
 
-        
-    }
+}
 
     func locationManager(_ manager: CLLocationManager, didUpdateHeading heading: CLHeading) {
         let direction: Float = Float(heading.magneticHeading)
@@ -134,7 +117,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         }).resume()
     }
     
-    func getExitData (location: CLLocationCoordinate2D, distance: Int) {
+    func getExitData (location: CLLocationCoordinate2D, distance: Float) {
         let exitURL = NSURL(string: "http://overpass-api.de/api/interpreter?data=[out:json];node[highway=motorway_junction](around:\(distance),\(location.latitude),\(location.longitude));out%20meta;")
         URLSession.shared.dataTask(with: (exitURL as URL?)!, completionHandler: {(data, response, error) -> Void in
             if let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
@@ -147,7 +130,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         }).resume()
     }
     
-    func getRestAreaData (location: CLLocationCoordinate2D, distance: Int) {
+    func getRestAreaData (location: CLLocationCoordinate2D, distance: Float) {
         let restAreaURL = NSURL(string: "http://overpass-api.de/api/interpreter?data=[out:json];node[highway=rest_area](around:\(distance),\(location.latitude),\(location.longitude));out%20meta;")
         URLSession.shared.dataTask(with: (restAreaURL as URL?)!, completionHandler: {(data, response, error) -> Void in
             if let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
@@ -194,6 +177,10 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         } else {
             return "North"
         }
+    }
+
+    func loadSettings() -> Settings?  {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Settings.ArchiveURL.path) as? Settings
     }
     
 }
