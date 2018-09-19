@@ -10,12 +10,30 @@
 		0341BBD420C862870055BB26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341BBD320C862870055BB26 /* AppDelegate.swift */; };
 		0341BBD720C862870055BB26 /* rainride.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0341BBD520C862870055BB26 /* rainride.xcdatamodeld */; };
 		0341BBD920C862870055BB26 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341BBD820C862870055BB26 /* MasterViewController.swift */; };
-		0341BBDB20C862870055BB26 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341BBDA20C862870055BB26 /* DetailViewController.swift */; };
 		0341BBDE20C862870055BB26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0341BBDC20C862870055BB26 /* Main.storyboard */; };
 		0341BBE020C862870055BB26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0341BBDF20C862870055BB26 /* Assets.xcassets */; };
 		0341BBE320C862870055BB26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0341BBE120C862870055BB26 /* LaunchScreen.storyboard */; };
 		0341BBEE20C862880055BB26 /* rainrideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341BBED20C862880055BB26 /* rainrideTests.swift */; };
 		0341BBF920C862880055BB26 /* rainrideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341BBF820C862880055BB26 /* rainrideUITests.swift */; };
+		0341BC0720C869330055BB26 /* ExitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341BC0620C869330055BB26 /* ExitsViewController.swift */; };
+		0341BC0920C968340055BB26 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341BC0820C968340055BB26 /* WeatherViewController.swift */; };
+		0341BC0B20C968510055BB26 /* SpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341BC0A20C968510055BB26 /* SpeedViewController.swift */; };
+		0341BC1220C980EA0055BB26 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0341BC1020C980EA0055BB26 /* Interface.storyboard */; };
+		0341BC1420C980EB0055BB26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0341BC1320C980EB0055BB26 /* Assets.xcassets */; };
+		0341BC1B20C980EB0055BB26 /* watchApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0341BC1A20C980EB0055BB26 /* watchApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0341BC2020C980EB0055BB26 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341BC1F20C980EB0055BB26 /* InterfaceController.swift */; };
+		0341BC2220C980EB0055BB26 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341BC2120C980EB0055BB26 /* ExtensionDelegate.swift */; };
+		0341BC2420C980EB0055BB26 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341BC2320C980EB0055BB26 /* NotificationController.swift */; };
+		0341BC2620C980EB0055BB26 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341BC2520C980EB0055BB26 /* ComplicationController.swift */; };
+		0341BC2820C980EB0055BB26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0341BC2720C980EB0055BB26 /* Assets.xcassets */; };
+		0341BC2D20C980EB0055BB26 /* watchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0341BC0E20C980EA0055BB26 /* watchApp.app */; };
+		0341BC3720C9AF0D0055BB26 /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341BC3620C9AF0D0055BB26 /* PinAnnotation.swift */; };
+		03794B19214ABB2900D5EA23 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03794B18214ABB2900D5EA23 /* SettingsViewController.swift */; };
+		3C7E2934CFF96C8FE7A58E21 /* Pods_rainrideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447FBB66BC787B1820D8133F /* Pods_rainrideUITests.framework */; };
+		43F711A2821D83BB7101A659 /* Pods_rainrideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9CDA6CB7D00003D96E21E2 /* Pods_rainrideTests.framework */; };
+		6FA935D92B416BAF975D4163 /* Pods_rainride.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A72CD4103ED28788FE8289 /* Pods_rainride.framework */; };
+		778348F78A055A33B28D4DBD /* Pods_watchApp_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5167EABA69593265C63235B /* Pods_watchApp_Extension.framework */; };
+		885E9557BE862DDF0B6CD80A /* Pods_watchApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D79136678D30E3274F5380 /* Pods_watchApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,14 +51,62 @@
 			remoteGlobalIDString = 0341BBCF20C862870055BB26;
 			remoteInfo = rainride;
 		};
+		0341BC1C20C980EB0055BB26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0341BBC820C862870055BB26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0341BC1920C980EB0055BB26;
+			remoteInfo = "watchApp Extension";
+		};
+		0341BC2B20C980EB0055BB26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0341BBC820C862870055BB26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0341BC0D20C980EA0055BB26;
+			remoteInfo = watchApp;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0341BC3120C980EB0055BB26 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0341BC1B20C980EB0055BB26 /* watchApp Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0341BC3520C980EB0055BB26 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				0341BC2D20C980EB0055BB26 /* watchApp.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		035950042136A7660096BE51 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0341BBD020C862870055BB26 /* rainride.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rainride.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0341BBD320C862870055BB26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0341BBD620C862870055BB26 /* rainride.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = rainride.xcdatamodel; sourceTree = "<group>"; };
 		0341BBD820C862870055BB26 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		0341BBDA20C862870055BB26 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0341BBDD20C862870055BB26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0341BBDF20C862870055BB26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0341BBE220C862870055BB26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +117,38 @@
 		0341BBF420C862880055BB26 /* rainrideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rainrideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0341BBF820C862880055BB26 /* rainrideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rainrideUITests.swift; sourceTree = "<group>"; };
 		0341BBFA20C862880055BB26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0341BC0620C869330055BB26 /* ExitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitsViewController.swift; sourceTree = "<group>"; };
+		0341BC0820C968340055BB26 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		0341BC0A20C968510055BB26 /* SpeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedViewController.swift; sourceTree = "<group>"; };
+		0341BC0E20C980EA0055BB26 /* watchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0341BC1120C980EA0055BB26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		0341BC1320C980EB0055BB26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0341BC1520C980EB0055BB26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0341BC1A20C980EB0055BB26 /* watchApp Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "watchApp Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0341BC1F20C980EB0055BB26 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		0341BC2120C980EB0055BB26 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		0341BC2320C980EB0055BB26 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		0341BC2520C980EB0055BB26 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		0341BC2720C980EB0055BB26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0341BC2920C980EB0055BB26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0341BC2A20C980EB0055BB26 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		0341BC3620C9AF0D0055BB26 /* PinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
+		03794B18214ABB2900D5EA23 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1A56DBE7C594B06D70557770 /* Pods-watchApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-watchApp/Pods-watchApp.release.xcconfig"; sourceTree = "<group>"; };
+		39D79136678D30E3274F5380 /* Pods_watchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_watchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9CDA6CB7D00003D96E21E2 /* Pods_rainrideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rainrideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		447FBB66BC787B1820D8133F /* Pods_rainrideUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rainrideUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45FA7466E4A6E0448336F673 /* Pods-watchApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-watchApp/Pods-watchApp.debug.xcconfig"; sourceTree = "<group>"; };
+		47B1FB3A0DC6805860DBBF22 /* Pods-rainride.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rainride.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rainride/Pods-rainride.debug.xcconfig"; sourceTree = "<group>"; };
+		4BF01B08938708E882C31B97 /* Pods-rainrideUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rainrideUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-rainrideUITests/Pods-rainrideUITests.release.xcconfig"; sourceTree = "<group>"; };
+		683567E88B414A84C8C23EDF /* Pods-rainrideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rainrideTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rainrideTests/Pods-rainrideTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8CFF93B8FB819B1323BE150E /* Pods-watchApp Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchApp Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-watchApp Extension/Pods-watchApp Extension.release.xcconfig"; sourceTree = "<group>"; };
+		9FC201746D74D951B44B381F /* Pods-rainrideUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rainrideUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rainrideUITests/Pods-rainrideUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BCE9F817225517114F8390A1 /* Pods-rainrideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rainrideTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-rainrideTests/Pods-rainrideTests.release.xcconfig"; sourceTree = "<group>"; };
+		C9A72CD4103ED28788FE8289 /* Pods_rainride.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rainride.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E37052D614213FAD23F810DE /* Pods-rainride.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rainride.release.xcconfig"; path = "Pods/Target Support Files/Pods-rainride/Pods-rainride.release.xcconfig"; sourceTree = "<group>"; };
+		E5167EABA69593265C63235B /* Pods_watchApp_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_watchApp_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2B8DB58E609921CD9E657E1 /* Pods-watchApp Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchApp Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-watchApp Extension/Pods-watchApp Extension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FA935D92B416BAF975D4163 /* Pods_rainride.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F711A2821D83BB7101A659 /* Pods_rainrideTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +172,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C7E2934CFF96C8FE7A58E21 /* Pods_rainrideUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0341BC1720C980EB0055BB26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				778348F78A055A33B28D4DBD /* Pods_watchApp_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36241AC34E9D9717F427F0D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				885E9557BE862DDF0B6CD80A /* Pods_watchApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +201,11 @@
 				0341BBD220C862870055BB26 /* rainride */,
 				0341BBEC20C862870055BB26 /* rainrideTests */,
 				0341BBF720C862880055BB26 /* rainrideUITests */,
+				0341BC0F20C980EA0055BB26 /* watchApp */,
+				0341BC1E20C980EB0055BB26 /* watchApp Extension */,
 				0341BBD120C862870055BB26 /* Products */,
+				6913C49F81EA0D464658852D /* Pods */,
+				1714FF5821B7A32B3C1F3D56 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +215,8 @@
 				0341BBD020C862870055BB26 /* rainride.app */,
 				0341BBE920C862870055BB26 /* rainrideTests.xctest */,
 				0341BBF420C862880055BB26 /* rainrideUITests.xctest */,
+				0341BC0E20C980EA0055BB26 /* watchApp.app */,
+				0341BC1A20C980EB0055BB26 /* watchApp Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,12 +226,16 @@
 			children = (
 				0341BBD320C862870055BB26 /* AppDelegate.swift */,
 				0341BBD820C862870055BB26 /* MasterViewController.swift */,
-				0341BBDA20C862870055BB26 /* DetailViewController.swift */,
+				0341BC0A20C968510055BB26 /* SpeedViewController.swift */,
+				0341BC0820C968340055BB26 /* WeatherViewController.swift */,
+				0341BC0620C869330055BB26 /* ExitsViewController.swift */,
+				0341BC3620C9AF0D0055BB26 /* PinAnnotation.swift */,
 				0341BBDC20C862870055BB26 /* Main.storyboard */,
 				0341BBDF20C862870055BB26 /* Assets.xcassets */,
 				0341BBE120C862870055BB26 /* LaunchScreen.storyboard */,
 				0341BBE420C862870055BB26 /* Info.plist */,
 				0341BBD520C862870055BB26 /* rainride.xcdatamodeld */,
+				03794B18214ABB2900D5EA23 /* SettingsViewController.swift */,
 			);
 			path = rainride;
 			sourceTree = "<group>";
@@ -131,6 +258,59 @@
 			path = rainrideUITests;
 			sourceTree = "<group>";
 		};
+		0341BC0F20C980EA0055BB26 /* watchApp */ = {
+			isa = PBXGroup;
+			children = (
+				0341BC1020C980EA0055BB26 /* Interface.storyboard */,
+				0341BC1320C980EB0055BB26 /* Assets.xcassets */,
+				0341BC1520C980EB0055BB26 /* Info.plist */,
+			);
+			path = watchApp;
+			sourceTree = "<group>";
+		};
+		0341BC1E20C980EB0055BB26 /* watchApp Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0341BC1F20C980EB0055BB26 /* InterfaceController.swift */,
+				0341BC2120C980EB0055BB26 /* ExtensionDelegate.swift */,
+				0341BC2320C980EB0055BB26 /* NotificationController.swift */,
+				0341BC2520C980EB0055BB26 /* ComplicationController.swift */,
+				0341BC2720C980EB0055BB26 /* Assets.xcassets */,
+				0341BC2920C980EB0055BB26 /* Info.plist */,
+				0341BC2A20C980EB0055BB26 /* PushNotificationPayload.apns */,
+			);
+			path = "watchApp Extension";
+			sourceTree = "<group>";
+		};
+		1714FF5821B7A32B3C1F3D56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9A72CD4103ED28788FE8289 /* Pods_rainride.framework */,
+				3A9CDA6CB7D00003D96E21E2 /* Pods_rainrideTests.framework */,
+				447FBB66BC787B1820D8133F /* Pods_rainrideUITests.framework */,
+				39D79136678D30E3274F5380 /* Pods_watchApp.framework */,
+				E5167EABA69593265C63235B /* Pods_watchApp_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6913C49F81EA0D464658852D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47B1FB3A0DC6805860DBBF22 /* Pods-rainride.debug.xcconfig */,
+				E37052D614213FAD23F810DE /* Pods-rainride.release.xcconfig */,
+				683567E88B414A84C8C23EDF /* Pods-rainrideTests.debug.xcconfig */,
+				BCE9F817225517114F8390A1 /* Pods-rainrideTests.release.xcconfig */,
+				9FC201746D74D951B44B381F /* Pods-rainrideUITests.debug.xcconfig */,
+				4BF01B08938708E882C31B97 /* Pods-rainrideUITests.release.xcconfig */,
+				45FA7466E4A6E0448336F673 /* Pods-watchApp.debug.xcconfig */,
+				1A56DBE7C594B06D70557770 /* Pods-watchApp.release.xcconfig */,
+				F2B8DB58E609921CD9E657E1 /* Pods-watchApp Extension.debug.xcconfig */,
+				8CFF93B8FB819B1323BE150E /* Pods-watchApp Extension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,13 +318,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0341BBFD20C862880055BB26 /* Build configuration list for PBXNativeTarget "rainride" */;
 			buildPhases = (
+				FB2D04D561FED63BAB826AD5 /* [CP] Check Pods Manifest.lock */,
 				0341BBCC20C862870055BB26 /* Sources */,
 				0341BBCD20C862870055BB26 /* Frameworks */,
 				0341BBCE20C862870055BB26 /* Resources */,
+				0341BC3520C980EB0055BB26 /* Embed Watch Content */,
+				035950042136A7660096BE51 /* Embed Frameworks */,
+				2E429946E6DB380B6E25F0CE /* [CP] Embed Pods Frameworks */,
+				BF8FA9B9BDFC4F170529916E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0341BC2C20C980EB0055BB26 /* PBXTargetDependency */,
 			);
 			name = rainride;
 			productName = rainride;
@@ -155,9 +341,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0341BC0020C862880055BB26 /* Build configuration list for PBXNativeTarget "rainrideTests" */;
 			buildPhases = (
+				FD0DA27159FA9F30A2DB637E /* [CP] Check Pods Manifest.lock */,
 				0341BBE520C862870055BB26 /* Sources */,
 				0341BBE620C862870055BB26 /* Frameworks */,
 				0341BBE720C862870055BB26 /* Resources */,
+				D934DD8964545A88A4A44116 /* [CP] Embed Pods Frameworks */,
+				2AB50317C8F5DC49C8DC356E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,9 +362,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0341BC0320C862880055BB26 /* Build configuration list for PBXNativeTarget "rainrideUITests" */;
 			buildPhases = (
+				29658F048C123C2412260B5E /* [CP] Check Pods Manifest.lock */,
 				0341BBF020C862880055BB26 /* Sources */,
 				0341BBF120C862880055BB26 /* Frameworks */,
 				0341BBF220C862880055BB26 /* Resources */,
+				ACF897737524DB9466B201C8 /* [CP] Embed Pods Frameworks */,
+				564FA9C419AD63851F3178FC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,6 +378,46 @@
 			productName = rainrideUITests;
 			productReference = 0341BBF420C862880055BB26 /* rainrideUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		0341BC0D20C980EA0055BB26 /* watchApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0341BC3220C980EB0055BB26 /* Build configuration list for PBXNativeTarget "watchApp" */;
+			buildPhases = (
+				19619BAA3384CA3740BF7CD9 /* [CP] Check Pods Manifest.lock */,
+				0341BC0C20C980EA0055BB26 /* Resources */,
+				0341BC3120C980EB0055BB26 /* Embed App Extensions */,
+				36241AC34E9D9717F427F0D7 /* Frameworks */,
+				42BE094B201DD49E31623B8E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0341BC1D20C980EB0055BB26 /* PBXTargetDependency */,
+			);
+			name = watchApp;
+			productName = watchApp;
+			productReference = 0341BC0E20C980EA0055BB26 /* watchApp.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		0341BC1920C980EB0055BB26 /* watchApp Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0341BC2E20C980EB0055BB26 /* Build configuration list for PBXNativeTarget "watchApp Extension" */;
+			buildPhases = (
+				F5D06927F8D87CB5A1D8CCC5 /* [CP] Check Pods Manifest.lock */,
+				0341BC1620C980EB0055BB26 /* Sources */,
+				0341BC1720C980EB0055BB26 /* Frameworks */,
+				0341BC1820C980EB0055BB26 /* Resources */,
+				90AE604D591ED2B969A969DD /* [CP] Embed Pods Frameworks */,
+				5711B87FD306D0B9B35EA1DB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "watchApp Extension";
+			productName = "watchApp Extension";
+			productReference = 0341BC1A20C980EB0055BB26 /* watchApp Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -208,6 +440,12 @@
 						CreatedOnToolsVersion = 9.3.1;
 						TestTargetID = 0341BBCF20C862870055BB26;
 					};
+					0341BC0D20C980EA0055BB26 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					0341BC1920C980EB0055BB26 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 0341BBCB20C862870055BB26 /* Build configuration list for PBXProject "rainride" */;
@@ -226,6 +464,8 @@
 				0341BBCF20C862870055BB26 /* rainride */,
 				0341BBE820C862870055BB26 /* rainrideTests */,
 				0341BBF320C862880055BB26 /* rainrideUITests */,
+				0341BC0D20C980EA0055BB26 /* watchApp */,
+				0341BC1920C980EB0055BB26 /* watchApp Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -255,17 +495,269 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0341BC0C20C980EA0055BB26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0341BC1420C980EB0055BB26 /* Assets.xcassets in Resources */,
+				0341BC1220C980EA0055BB26 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0341BC1820C980EB0055BB26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0341BC2820C980EB0055BB26 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19619BAA3384CA3740BF7CD9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-watchApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29658F048C123C2412260B5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rainrideUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AB50317C8F5DC49C8DC356E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rainrideTests/Pods-rainrideTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E429946E6DB380B6E25F0CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-rainride/Pods-rainride-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rainride/Pods-rainride-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42BE094B201DD49E31623B8E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-watchApp/Pods-watchApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		564FA9C419AD63851F3178FC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rainrideUITests/Pods-rainrideUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5711B87FD306D0B9B35EA1DB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-watchApp Extension/Pods-watchApp Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90AE604D591ED2B969A969DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-watchApp Extension/Pods-watchApp Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACF897737524DB9466B201C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rainrideUITests/Pods-rainrideUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF8FA9B9BDFC4F170529916E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rainride/Pods-rainride-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D934DD8964545A88A4A44116 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rainrideTests/Pods-rainrideTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5D06927F8D87CB5A1D8CCC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-watchApp Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB2D04D561FED63BAB826AD5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rainride-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD0DA27159FA9F30A2DB637E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rainrideTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0341BBCC20C862870055BB26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0341BC0B20C968510055BB26 /* SpeedViewController.swift in Sources */,
 				0341BBD420C862870055BB26 /* AppDelegate.swift in Sources */,
+				0341BC0920C968340055BB26 /* WeatherViewController.swift in Sources */,
 				0341BBD720C862870055BB26 /* rainride.xcdatamodeld in Sources */,
 				0341BBD920C862870055BB26 /* MasterViewController.swift in Sources */,
-				0341BBDB20C862870055BB26 /* DetailViewController.swift in Sources */,
+				0341BC0720C869330055BB26 /* ExitsViewController.swift in Sources */,
+				0341BC3720C9AF0D0055BB26 /* PinAnnotation.swift in Sources */,
+				03794B19214ABB2900D5EA23 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +777,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0341BC1620C980EB0055BB26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0341BC2420C980EB0055BB26 /* NotificationController.swift in Sources */,
+				0341BC2620C980EB0055BB26 /* ComplicationController.swift in Sources */,
+				0341BC2220C980EB0055BB26 /* ExtensionDelegate.swift in Sources */,
+				0341BC2020C980EB0055BB26 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -297,6 +800,16 @@
 			isa = PBXTargetDependency;
 			target = 0341BBCF20C862870055BB26 /* rainride */;
 			targetProxy = 0341BBF520C862880055BB26 /* PBXContainerItemProxy */;
+		};
+		0341BC1D20C980EB0055BB26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0341BC1920C980EB0055BB26 /* watchApp Extension */;
+			targetProxy = 0341BC1C20C980EB0055BB26 /* PBXContainerItemProxy */;
+		};
+		0341BC2C20C980EB0055BB26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0341BC0D20C980EA0055BB26 /* watchApp */;
+			targetProxy = 0341BC2B20C980EB0055BB26 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -315,6 +828,14 @@
 				0341BBE220C862870055BB26 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0341BC1020C980EA0055BB26 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0341BC1120C980EA0055BB26 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -436,7 +957,9 @@
 		};
 		0341BBFE20C862880055BB26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47B1FB3A0DC6805860DBBF22 /* Pods-rainride.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9HQ64HZ4P7;
@@ -454,7 +977,9 @@
 		};
 		0341BBFF20C862880055BB26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E37052D614213FAD23F810DE /* Pods-rainride.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9HQ64HZ4P7;
@@ -472,6 +997,7 @@
 		};
 		0341BC0120C862880055BB26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 683567E88B414A84C8C23EDF /* Pods-rainrideTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +1019,7 @@
 		};
 		0341BC0220C862880055BB26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE9F817225517114F8390A1 /* Pods-rainrideTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -514,6 +1041,7 @@
 		};
 		0341BC0420C862880055BB26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FC201746D74D951B44B381F /* Pods-rainrideUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,6 +1062,7 @@
 		};
 		0341BC0520C862880055BB26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BF01B08938708E882C31B97 /* Pods-rainrideUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -549,6 +1078,92 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = rainride;
+			};
+			name = Release;
+		};
+		0341BC2F20C980EB0055BB26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2B8DB58E609921CD9E657E1 /* Pods-watchApp Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9HQ64HZ4P7;
+				INFOPLIST_FILE = "watchApp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.phntxx.rainride.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		0341BC3020C980EB0055BB26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CFF93B8FB819B1323BE150E /* Pods-watchApp Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9HQ64HZ4P7;
+				INFOPLIST_FILE = "watchApp Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.phntxx.rainride.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		0341BC3320C980EB0055BB26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45FA7466E4A6E0448336F673 /* Pods-watchApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9HQ64HZ4P7;
+				IBSC_MODULE = watchApp_Extension;
+				INFOPLIST_FILE = watchApp/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phntxx.rainride.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		0341BC3420C980EB0055BB26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A56DBE7C594B06D70557770 /* Pods-watchApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9HQ64HZ4P7;
+				IBSC_MODULE = watchApp_Extension;
+				INFOPLIST_FILE = watchApp/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phntxx.rainride.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
 			name = Release;
 		};
@@ -587,6 +1202,24 @@
 			buildConfigurations = (
 				0341BC0420C862880055BB26 /* Debug */,
 				0341BC0520C862880055BB26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0341BC2E20C980EB0055BB26 /* Build configuration list for PBXNativeTarget "watchApp Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0341BC2F20C980EB0055BB26 /* Debug */,
+				0341BC3020C980EB0055BB26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0341BC3220C980EB0055BB26 /* Build configuration list for PBXNativeTarget "watchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0341BC3320C980EB0055BB26 /* Debug */,
+				0341BC3420C980EB0055BB26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

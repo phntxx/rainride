@@ -8,189 +8,193 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 
-class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class MasterViewController: UITableViewController, CLLocationManagerDelegate {
 
-    var detailViewController: DetailViewController? = nil
-    var managedObjectContext: NSManagedObjectContext? = nil
-
-
+    @IBOutlet weak var speedLabel: UILabel!
+    @IBOutlet weak var headingLabel: UILabel!
+    @IBOutlet weak var weatherLabel: UILabel!
+    @IBOutlet weak var exitLabel: UILabel!
+    
+    var token : Int = 0
+    var locationManager : CLLocationManager! = CLLocationManager()
+    var restAreaData: [Any] = []
+    var exitData: [Any] = []
+    var weatherData: NSDictionary = [:]
+    var currentHeading: String = ""
+    
+    var settings: NSDictionary?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        navigationItem.leftBarButtonItem = editButtonItem
 
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
-        navigationItem.rightBarButtonItem = addButton
-        if let split = splitViewController {
-            let controllers = split.viewControllers
-            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+        if let path = Bundle.main.path(forResource: "root", ofType: "plist") {
+            self.settings = NSDictionary(contentsOfFile: path)
         }
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        if (CLLocationManager.headingAvailable()) {
+            locationManager.headingFilter = 1
+            locationManager.startUpdatingHeading()
+            print(self.currentHeading)
+        }
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-    @objc
-    func insertNewObject(_ sender: Any) {
-        let context = self.fetchedResultsController.managedObjectContext
-        let newEvent = Event(context: context)
-             
-        // If appropriate, configure the new managed object.
-        newEvent.timestamp = Date()
-
-        // Save the context.
-        do {
-            try context.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            let nserror = error as NSError
-            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-        }
-    }
-
-    // MARK: - Segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-            let object = fetchedResultsController.object(at: indexPath)
-                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
-                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-                controller.navigationItem.leftItemsSupplementBackButton = true
-            }
+        if segue.identifier == "showSpeed" {
+            let controller = (segue.destination as! UINavigationController).topViewController as! SpeedViewController
+            controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+            controller.navigationItem.leftItemsSupplementBackButton = true
+        } else if segue.identifier == "showWeather" {
+            let controller = (segue.destination as! UINavigationController).topViewController as! WeatherViewController
+            controller.weatherData = self.weatherData
+            controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+            controller.navigationItem.leftItemsSupplementBackButton = true
+        } else if segue.identifier == "showExits" {
+            let controller = (segue.destination as! UINavigationController).topViewController as! ExitsViewController
+            controller.exitData = self.exitData
+            controller.restAreaData = self.restAreaData
+            controller.currentHeading = self.currentHeading
+            controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+            controller.navigationItem.leftItemsSupplementBackButton = true
         }
     }
 
-    // MARK: - Table View
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return fetchedResultsController.sections?.count ?? 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sectionInfo = fetchedResultsController.sections![section]
-        return sectionInfo.numberOfObjects
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let event = fetchedResultsController.object(at: indexPath)
-        configureCell(cell, withEvent: event)
-        return cell
-    }
-
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            let context = fetchedResultsController.managedObjectContext
-            context.delete(fetchedResultsController.object(at: indexPath))
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if (token == 0) {
+            let locValue : CLLocationCoordinate2D = manager.location!.coordinate
+            
+            if let dict = self.settings {
                 
-            do {
-                try context.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                if dict["unit_temperature"] as! String == "0" {
+                    getWeatherData(location: locValue, unit: "us") // Fahrenheit
+                } else if dict["unit_temperature"] as! String == "1" {
+                    getWeatherData(location: locValue, unit: "si") // Celsius
+                }
+                
+                if dict["unit_speed"] as! String == "0" {
+                    let unitFloat = 2.23694
+                    let unitString = "mph"
+                    if (locations[0].speed > 0) {
+                        speedLabel.text = "Speed: \(locations[0].speed * unitFloat) \(unitString)"
+                    }
+                } else if dict["unit_speed"] as! String == "1" {
+                    let unitFloat = 3.6
+                    let unitString = "km/h"
+                    if (locations[0].speed > 0) {
+                        speedLabel.text = "Speed: \(locations[0].speed * unitFloat) \(unitString)"
+                    }
+                }
+
+                let distance = (dict["distance"] as! Decimal) * 1000
+                getExitData(location: locValue, distance: distance as! Int)
+                getRestAreaData(location: locValue, distance: distance as! Int)
+            } else {
+                getExitData(location: locValue, distance: 25000)
+                getRestAreaData(location: locValue, distance: 25000)
+                getWeatherData(location: locValue, unit: "auto")
             }
+            
+            token = 1
+        }
+
+        
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading heading: CLHeading) {
+        let direction: Float = Float(heading.magneticHeading)
+        headingLabel.text = "Heading: \(convertHeading(heading: direction))"
+        self.currentHeading = convertHeading(heading: direction)
+    }
+    
+    func getWeatherData (location: CLLocationCoordinate2D, unit: String) {
+        let weatherURL = NSURL(string: "https://api.darksky.net/forecast/586d4250106f5bb62fb1fd67f943ca03/\(location.latitude),\(location.longitude)?units=\(unit)")
+        URLSession.shared.dataTask(with: (weatherURL as URL?)!, completionHandler: {(data, response, error) -> Void in
+            if let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+                self.weatherData = jsonData!
+                let currentData = jsonData!["currently"] as! NSDictionary
+                DispatchQueue.main.async {
+                    self.weatherLabel.text = "Currently it's \(currentData["summary"] as! String) with a temperature of \(currentData["temperature"] as! NSNumber)"
+                }
+            }
+        }).resume()
+    }
+    
+    func getExitData (location: CLLocationCoordinate2D, distance: Int) {
+        let exitURL = NSURL(string: "http://overpass-api.de/api/interpreter?data=[out:json];node[highway=motorway_junction](around:\(distance),\(location.latitude),\(location.longitude));out%20meta;")
+        URLSession.shared.dataTask(with: (exitURL as URL?)!, completionHandler: {(data, response, error) -> Void in
+            if let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+                let items = jsonData!["elements"] as! NSArray
+                for item in items {
+                    let exit = item as! NSDictionary
+                    self.exitData.append([exit["lat"] as! NSNumber, exit["lon"] as! NSNumber])
+                }
+            }
+        }).resume()
+    }
+    
+    func getRestAreaData (location: CLLocationCoordinate2D, distance: Int) {
+        let restAreaURL = NSURL(string: "http://overpass-api.de/api/interpreter?data=[out:json];node[highway=rest_area](around:\(distance),\(location.latitude),\(location.longitude));out%20meta;")
+        URLSession.shared.dataTask(with: (restAreaURL as URL?)!, completionHandler: {(data, response, error) -> Void in
+            if let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+                let items = jsonData!["elements"] as! NSArray
+                for item in items {
+                    let restArea = item as! NSDictionary
+                    self.restAreaData.append([restArea["lat"] as! NSNumber, restArea["lon"] as! NSNumber])
+                }
+            }
+        }).resume()
+    }
+    
+    func convertHeading (heading: Float) -> String {
+        if (11.25 <= heading && heading < 33.75) {
+            return "North-Northeast"
+        } else if (33.75 <= heading && heading < 56.25) {
+            return "North-East"
+        } else if (56.25 <= heading && heading < 78.75) {
+            return "East-Northeast"
+        } else if (78.75 <= heading && heading < 101.25) {
+            return "East"
+        } else if (101.25 <= heading && heading < 123.75) {
+            return "East-Southeast"
+        } else if (123.75 <= heading && heading < 146.25) {
+            return "South-East"
+        } else if (146.25 <= heading && heading < 168.75) {
+            return "South-Southeast"
+        } else if (168.75 <= heading && heading < 191.25) {
+            return "South"
+        } else if (191.25 <= heading && heading < 213.75) {
+            return "South-Southwest"
+        } else if (213.75 <= heading && heading < 236.25) {
+            return "South-West"
+        } else if (236.25 <= heading && heading < 258.75) {
+            return "West-Southwest"
+        } else if (258.75 <= heading && heading < 281.25) {
+            return "West"
+        } else if (281.25 <= heading && heading < 303.75) {
+            return "West-Northwest"
+        } else if (303.75 <= heading && heading < 326.25) {
+            return "North-West"
+        } else if (326.25 <= heading && heading < 348.75) {
+            return "North-Northwest"
+        } else {
+            return "North"
         }
     }
-
-    func configureCell(_ cell: UITableViewCell, withEvent event: Event) {
-        cell.textLabel!.text = event.timestamp!.description
-    }
-
-    // MARK: - Fetched results controller
-
-    var fetchedResultsController: NSFetchedResultsController<Event> {
-        if _fetchedResultsController != nil {
-            return _fetchedResultsController!
-        }
-        
-        let fetchRequest: NSFetchRequest<Event> = Event.fetchRequest()
-        
-        // Set the batch size to a suitable number.
-        fetchRequest.fetchBatchSize = 20
-        
-        // Edit the sort key as appropriate.
-        let sortDescriptor = NSSortDescriptor(key: "timestamp", ascending: false)
-        
-        fetchRequest.sortDescriptors = [sortDescriptor]
-        
-        // Edit the section name key path and cache name if appropriate.
-        // nil for section name key path means "no sections".
-        let aFetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext!, sectionNameKeyPath: nil, cacheName: "Master")
-        aFetchedResultsController.delegate = self
-        _fetchedResultsController = aFetchedResultsController
-        
-        do {
-            try _fetchedResultsController!.performFetch()
-        } catch {
-             // Replace this implementation with code to handle the error appropriately.
-             // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-             let nserror = error as NSError
-             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-        }
-        
-        return _fetchedResultsController!
-    }    
-    var _fetchedResultsController: NSFetchedResultsController<Event>? = nil
-
-    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        tableView.beginUpdates()
-    }
-
-    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
-        switch type {
-            case .insert:
-                tableView.insertSections(IndexSet(integer: sectionIndex), with: .fade)
-            case .delete:
-                tableView.deleteSections(IndexSet(integer: sectionIndex), with: .fade)
-            default:
-                return
-        }
-    }
-
-    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        switch type {
-            case .insert:
-                tableView.insertRows(at: [newIndexPath!], with: .fade)
-            case .delete:
-                tableView.deleteRows(at: [indexPath!], with: .fade)
-            case .update:
-                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! Event)
-            case .move:
-                configureCell(tableView.cellForRow(at: indexPath!)!, withEvent: anObject as! Event)
-                tableView.moveRow(at: indexPath!, to: newIndexPath!)
-        }
-    }
-
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        tableView.endUpdates()
-    }
-
-    /*
-     // Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed.
-     
-     func controllerDidChangeContent(controller: NSFetchedResultsController) {
-         // In the simplest, most efficient, case, reload the table view.
-         tableView.reloadData()
-     }
-     */
-
+    
 }
 
