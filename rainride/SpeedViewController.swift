@@ -19,9 +19,15 @@ class SpeedViewController: UIViewController, CLLocationManagerDelegate {
     var token : Int = 0
     var locationManager : CLLocationManager! = CLLocationManager()
     var speeds : [Double] = []
-    
+
+    var unitString: String = "km/h"
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        if let settings = loadSettings () {
+            self.unitString = settings.speedUnit
+        }
         
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -54,13 +60,21 @@ class SpeedViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let unitFloat = 3.6
-        let unitString = "km/h"
+
+        var unitFloat = 3.6
+        if (self.unitString != "km/h") {
+            unitFloat = 2.23694
+        }
+
         if (locations[0].speed > 0) {
             speedLabel.text = "Speed: \(locations[0].speed * unitFloat) \(unitString)"
             speeds.append(locations[0].speed * unitFloat)
             updateGraph()
         }
+    }
+
+    func loadSettings () -> Settings? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Settings.ArchiveURL.path) as? Settings
     }
     
 }

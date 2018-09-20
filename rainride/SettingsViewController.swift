@@ -35,6 +35,21 @@ class SettingsViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
 
+    func loadSettings () -> Settings? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Settings.ArchiveURL.path) as? Settings
+    }
+
+    func updateRangeLabel() {
+        let range = 25 * self.rangeSlider.value * self.unitFloat
+        self.rangeLabel.text = "Range: \(range) \(self.unitString)"
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationViewController = segue.destination as? MasterViewController {
+            destinationViewController.updateSettings = true
+        }
+    }
+
     @IBAction func RangeSliderChanged(_ sender: Any) {
         updateRangeLabel()
     }
@@ -51,15 +66,6 @@ class SettingsViewController: UITableViewController {
         
         updateRangeLabel()
         
-    }
-    
-    func loadSettings () -> Settings? {
-        return NSKeyedUnarchiver.unarchiveObject(withFile: Settings.ArchiveURL.path) as? Settings
-    }
-    
-    func updateRangeLabel() {
-        let range = 25 * self.rangeSlider.value * self.unitFloat
-        self.rangeLabel.text = "Range: \(range) \(self.unitString)"
     }
 
     @IBAction func darkSkyLinkClicked(_ sender: Any) {

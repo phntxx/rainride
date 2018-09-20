@@ -86,6 +86,19 @@ class WeatherViewController: UITableViewController {
         
         return chartEntry
     }
+
+    func getWeatherData (location: CLLocationCoordinate2D, unit: String) {
+        let weatherURL = NSURL(string: "https://api.darksky.net/forecast/586d4250106f5bb62fb1fd67f943ca03/\(location.latitude),\(location.longitude)?units=\(unit)")
+        URLSession.shared.dataTask(with: (weatherURL as URL?)!, completionHandler: {(data, response, error) -> Void in
+            if let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+                self.weatherData = jsonData!
+                let currentData = jsonData!["currently"] as! NSDictionary
+                DispatchQueue.main.async {
+                    self.weatherLabel.text = "Currently it's \(currentData["summary"] as! String) with a temperature of \(currentData["temperature"] as! NSNumber)"
+                }
+            }
+        }).resume()
+    }
     
     @IBAction func creditsButtonClicked(_ sender: Any) {
         if let url = URL(string: "https://darksky.net/poweredby/") {

@@ -23,40 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0dbff13-a447-4c66-8c06-99abf8df6dbb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Animation/Animator.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Animation/Animator.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Charts/BarLineChartViewBase.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Charts/BarLineChartViewBase.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Charts/ChartViewBase.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Charts/ChartViewBase.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Charts/PieChartView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Charts/PieChartView.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Charts/PieRadarChartViewBase.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Charts/PieRadarChartViewBase.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Components/Legend.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Components/Legend.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Components/YAxis.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Components/YAxis.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Filters/DataApproximator+N.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Filters/DataApproximator+N.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Jobs/AnimatedViewPortJob.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Jobs/AnimatedViewPortJob.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/BarChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/BarChartRenderer.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/BubbleChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/BubbleChartRenderer.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/CandleStickChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/CandleStickChartRenderer.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/HorizontalBarChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/HorizontalBarChartRenderer.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/LegendRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/LegendRenderer.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/LineChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/LineChartRenderer.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/PieChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/PieChartRenderer.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/RadarChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/RadarChartRenderer.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/ScatterChartRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/ScatterChartRenderer.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/XAxisRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/XAxisRenderer.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/XAxisRendererHorizontalBarChart.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/XAxisRendererHorizontalBarChart.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/XAxisRendererRadarChart.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/XAxisRendererRadarChart.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/YAxisRenderer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/YAxisRenderer.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/YAxisRendererHorizontalBarChart.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/YAxisRendererHorizontalBarChart.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/YAxisRendererRadarChart.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Renderers/YAxisRendererRadarChart.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Utils/ChartUtils.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Utils/ChartUtils.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Utils/Platform.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Charts/Source/Charts/Utils/Platform.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rainride.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/rainride.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rainride.xcworkspace/xcuserdata/bastian.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/rainride.xcworkspace/xcuserdata/bastian.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rainride/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/rainride/AppDelegate.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rainride/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/rainride/Base.lproj/Main.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rainride/MasterViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/rainride/MasterViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rainride/Settings.swift" beforeDir="false" afterPath="$PROJECT_DIR$/rainride/Settings.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rainride/SettingsViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/rainride/SettingsViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rainride/SpeedViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/rainride/SpeedViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rainride/WeatherViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/rainride/WeatherViewController.swift" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Developer/Xcode/DerivedData/rainride-digtwmfzcqxnsxcazwlgwrftapjy/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,40 +41,40 @@
     <session id="-1814820556">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="2" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Podfile" value="1" />
-          <entry key="swift" value="10" />
+          <entry key="swift" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Podfile" value="1" />
-          <entry key="Swift" value="10" />
+          <entry key="Swift" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Podfile" value="20" />
-          <entry key="swift" value="591" />
+          <entry key="swift" value="1024" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Podfile" value="20" />
-          <entry key="Swift" value="591" />
+          <entry key="Swift" value="1024" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.appcode.build">
         <counts>
-          <entry key="buildservice" value="8" />
+          <entry key="buildservice" value="12" />
         </counts>
       </usages-collector>
     </session>
@@ -113,26 +84,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rainride/SettingsViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rainride/MasterViewController.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="151" column="35" lean-forward="true" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
+            <state>
+              <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rainride/WeatherViewController.swift">
+        <entry file="file://$PROJECT_DIR$/rainride/MasterViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1794">
-              <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+            <state relative-caret-position="568">
+              <caret line="117" column="4" lean-forward="true" selection-start-line="117" selection-start-column="4" selection-end-line="128" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rainride/SpeedViewController.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -148,6 +119,7 @@
         <option value="$PROJECT_DIR$/Podfile" />
         <option value="$PROJECT_DIR$/rainride/SettingsViewController.swift" />
         <option value="$PROJECT_DIR$/rainride/MasterViewController.swift" />
+        <option value="$PROJECT_DIR$/rainride/SpeedViewController.swift" />
         <option value="$PROJECT_DIR$/rainride/WeatherViewController.swift" />
       </list>
     </option>
@@ -167,6 +139,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Cidr.FilesView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -192,8 +166,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Cidr.FilesView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -236,17 +208,18 @@
       <workItem from="1537378328712" duration="1559000" />
       <workItem from="1537382490835" duration="657000" />
       <workItem from="1537386557630" duration="794000" />
+      <workItem from="1537461514316" duration="1556000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4604000" />
+    <option name="totallyTimeSpent" value="6160000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18530351" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18690096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -281,17 +254,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/rainride/MasterViewController.swift</url>
-          <line>108</line>
+          <line>119</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/rainride/MasterViewController.swift</url>
-          <line>82</line>
+          <line>90</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/rainride/MasterViewController.swift</url>
-          <line>80</line>
+          <line>88</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
@@ -324,16 +297,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rainride/SpeedViewController.swift">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rainride/SettingsViewController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache.zip!/ModuleCache/10A255/4.2/arm64/iphoneos12.0/CoreLocation.CLLocationManagerDelegate/CoreLocation.CLLocationManagerDelegate.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -341,17 +304,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rainride/WeatherViewController.swift">
+    <entry file="file://$PROJECT_DIR$/rainride/MasterViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1794">
-          <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+        <state relative-caret-position="568">
+          <caret line="117" column="4" lean-forward="true" selection-start-line="117" selection-start-column="4" selection-end-line="128" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rainride/MasterViewController.swift">
+    <entry file="file://$PROJECT_DIR$/rainride/SettingsViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="151" column="35" lean-forward="true" selection-start-line="151" selection-start-column="35" selection-end-line="151" selection-end-column="35" />
+        <state>
+          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rainride/WeatherViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="89" column="73" selection-start-line="89" selection-start-column="73" selection-end-line="89" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rainride/SpeedViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>

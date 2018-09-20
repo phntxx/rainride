@@ -28,7 +28,10 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
     var speedUnit: String = "km/h"
     var range: Float = 25
     var temperatureUnit: String = "auto"
-    
+
+    var updateSettings: Bool!
+    var locValue : CLLocationCoordinate2D!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +39,11 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
             self.speedUnit = settings.speedUnit
             self.range = settings.range
             self.temperatureUnit = settings.temperatureUnit
+        }
+
+        if updateSettings == true {
+            updateSettings = !updateSettings
+            updateData()
         }
 
         locationManager.delegate = self
@@ -79,24 +87,27 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
+        self.locValue = manager.location!.coordinate
         if (token == 0) {
-            let locValue : CLLocationCoordinate2D = manager.location!.coordinate
-            getExitData(location: locValue, distance: (self.range * 1000))
-            getRestAreaData(location: locValue, distance: (self.range * 1000))
-
-            if (self.temperatureUnit == "C") {
-                getWeatherData(location: locValue, unit: "si")
-            } else if (self.temperatureUnit == "F") {
-                getWeatherData(location: locValue, unit: "us")
-            } else {
-                getWeatherData(location: locValue, unit: "auto")
-            }
-
+            updateData()
             token = 1
         }
 
 }
+
+    func updateData() {
+
+        getExitData(location: self.locValue, distance: (self.range * 1000))
+        getRestAreaData(location: self.locValue, distance: (self.range * 1000))
+
+        if (self.temperatureUnit == "C") {
+            getWeatherData(location: self.locValue, unit: "si")
+        } else if (self.temperatureUnit == "F") {
+            getWeatherData(location: self.locValue, unit: "us")
+        } else {
+            getWeatherData(location: self.locValue, unit: "auto")
+        }
+    }
 
     func locationManager(_ manager: CLLocationManager, didUpdateHeading heading: CLHeading) {
         let direction: Float = Float(heading.magneticHeading)
