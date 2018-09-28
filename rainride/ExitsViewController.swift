@@ -15,11 +15,13 @@ class ExitsViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
-    var currentHeading: String = ""
+    
     var restAreaData: [Any] = []
     var exitData: [Any] = []
-    var token : Int = 0
+
     var currentLocation: [Any] = []
+    
+    var token : Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,12 +48,42 @@ class ExitsViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         let region = MKCoordinateRegion(center: center, span: span)
         let locValue : CLLocationCoordinate2D = manager.location!.coordinate
         self.currentLocation = [locValue.latitude, locValue.longitude]
-        if (token == 0) {
+        
+        if self.token {
+            self.token = !self.token
             mapView.setRegion(region, animated: true)
             mapView.showsUserLocation = true
-            token = 1
+            UserDefaults.standard.set(true, forKey: "updateMapOnce")
+            UserDefaults.standard.synchronize()
         }
         
+        var range : Float = 25
+        if let settings = loadSettings() {
+            range = settings.range
+        }
+        
+        
+        let exitURL = NSURL(string: "http://overpass-api.de/api/interpreter?data=[out:json];node[highway=motorway_junction](around:\(range * 1000),\(locValue.latitude),\(locValue.longitude));out%20meta;")
+        self.getOverPassData(url: exitURL!, type: "exit")
+        let restAreaURL = NSURL(string: "http://overpass-api.de/api/interpreter?data=[out:json];node[highway=rest_area](around:\(range * 1000),\(locValue.latitude),\(locValue.longitude));out%20meta;")
+        self.getOverPassData(url: restAreaURL!, type: "restarea")
+    }
+    
+    func getOverPassData (url: NSURL, type: String) {
+        URLSession.shared.dataTask(with: (url as URL?)!, completionHandler: {(data, response, error) -> Void in
+            if let jsonData = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+                let items = jsonData!["elements"] as! NSArray
+                for item in items {
+                    if (type == "exit") {
+                        let exit = item as! NSDictionary
+                        self.exitData.append([exit["lat"] as! NSNumber, exit["lon"] as! NSNumber])
+                    } else if (type == "restarea") {
+                        let restArea = item as! NSDictionary
+                        self.restAreaData.append([restArea["lat"] as! NSNumber, restArea["lon"] as! NSNumber])
+                    }
+                }
+            }
+        }).resume()
     }
     
     func insertPins (locations: NSArray, title: String) {
@@ -67,47 +99,7 @@ class ExitsViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         }
     }
     
-    func checkDirection (direction: String, lat1: Double, lng1: Double, lat2: Double, lng2: Double) -> Double{
-        if ((direction == "North") || (direction == "North-East") || (direction == "North-West") || (direction == "North-Northeast") || (direction == "North-Northwest")) {
-            if(lat2 > lat1) {
-                return distanceInKmBetweenEarthCoordinates (lat1: lat1, lng1: lng1, lat2: lat2, lng2: lng2)
-            } else {
-                return Double(99999)
-            }
-        } else if ((direction == "East") || (direction == "North-East") || (direction == "South-East") || (direction == "East-Southeast") || (direction == "East-Northeast")) {
-            if (lng2 > lng1) {
-                return distanceInKmBetweenEarthCoordinates (lat1: lat1, lng1: lng1, lat2: lat2, lng2: lng2)
-            } else {
-                return Double(99999)
-            }
-        } else if ((direction == "South") || (direction == "South-East") || (direction == "South-West") || (direction == "South-Southeast") || (direction == "South-Southwest")) {
-            if (lat2 < lat1) {
-                return distanceInKmBetweenEarthCoordinates (lat1: lat1, lng1: lng1, lat2: lat2, lng2: lng2)
-            } else {
-                return Double(99999)
-            }
-        } else if ((direction == "West") || (direction == "North-West") || (direction == "South-West") || (direction == "West-Northwest") || (direction == "West-Southwest")) {
-            if (lng2 < lng1) {
-                return distanceInKmBetweenEarthCoordinates (lat1: lat1, lng1: lng1, lat2: lat2, lng2: lng2)
-            } else {
-                return Double(99999)
-            }
-        }
-        return Double(99999)
-    }
-    
-    func distanceInKmBetweenEarthCoordinates (lat1: Double, lng1: Double, lat2: Double, lng2: Double) -> Double {
-        let earthRadiusKm = 6371
-        let dLat = degreesToRadians (degrees: (lat2-lat1))
-        let dLon = degreesToRadians (degrees: (lng2-lng1))
-        let latitude1 = degreesToRadians (degrees: lat1)
-        let latitude2 = degreesToRadians (degrees: lat2)
-        let a = sin(dLat/2) * sin(dLat/2) + sin(dLon/2) * sin(dLon/2) * cos(latitude1) * cos(latitude2)
-        let c = 2 * atan2(sqrt(a), sqrt(1-a))
-        return Double(earthRadiusKm) * Double(c)
-    }
-    
-    func degreesToRadians (degrees: Double) -> Double{
-        return (degrees * Double.pi / 180)
+    func loadSettings() -> Settings?  {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Settings.ArchiveURL.path) as? Settings
     }
 }

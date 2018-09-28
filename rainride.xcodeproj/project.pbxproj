@@ -29,6 +29,7 @@
 		0341BC2820C980EB0055BB26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0341BC2720C980EB0055BB26 /* Assets.xcassets */; };
 		0341BC2D20C980EB0055BB26 /* watchApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0341BC0E20C980EA0055BB26 /* watchApp.app */; };
 		0341BC3720C9AF0D0055BB26 /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0341BC3620C9AF0D0055BB26 /* PinAnnotation.swift */; };
+		0373EF26215EB76800FCEFB1 /* UsefulFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0373EF25215EB76800FCEFB1 /* UsefulFunctions.swift */; };
 		03794B19214ABB2900D5EA23 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03794B18214ABB2900D5EA23 /* SettingsViewController.swift */; };
 		3C7E2934CFF96C8FE7A58E21 /* Pods_rainrideUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447FBB66BC787B1820D8133F /* Pods_rainrideUITests.framework */; };
 		43F711A2821D83BB7101A659 /* Pods_rainrideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9CDA6CB7D00003D96E21E2 /* Pods_rainrideTests.framework */; };
@@ -135,6 +136,7 @@
 		0341BC2920C980EB0055BB26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0341BC2A20C980EB0055BB26 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		0341BC3620C9AF0D0055BB26 /* PinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
+		0373EF25215EB76800FCEFB1 /* UsefulFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulFunctions.swift; sourceTree = "<group>"; };
 		03794B18214ABB2900D5EA23 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1A56DBE7C594B06D70557770 /* Pods-watchApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-watchApp/Pods-watchApp.release.xcconfig"; sourceTree = "<group>"; };
 		39D79136678D30E3274F5380 /* Pods_watchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_watchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +241,7 @@
 				0341BBE420C862870055BB26 /* Info.plist */,
 				0341BBD520C862870055BB26 /* rainride.xcdatamodeld */,
 				032690EB2152DA8000C6108B /* Settings.swift */,
+				0373EF25215EB76800FCEFB1 /* UsefulFunctions.swift */,
 			);
 			path = rainride;
 			sourceTree = "<group>";
@@ -328,7 +331,6 @@
 				0341BC3520C980EB0055BB26 /* Embed Watch Content */,
 				035950042136A7660096BE51 /* Embed Frameworks */,
 				2E429946E6DB380B6E25F0CE /* [CP] Embed Pods Frameworks */,
-				BF8FA9B9BDFC4F170529916E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -348,8 +350,6 @@
 				0341BBE520C862870055BB26 /* Sources */,
 				0341BBE620C862870055BB26 /* Frameworks */,
 				0341BBE720C862870055BB26 /* Resources */,
-				D934DD8964545A88A4A44116 /* [CP] Embed Pods Frameworks */,
-				2AB50317C8F5DC49C8DC356E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -369,8 +369,6 @@
 				0341BBF020C862880055BB26 /* Sources */,
 				0341BBF120C862880055BB26 /* Frameworks */,
 				0341BBF220C862880055BB26 /* Resources */,
-				ACF897737524DB9466B201C8 /* [CP] Embed Pods Frameworks */,
-				564FA9C419AD63851F3178FC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -390,7 +388,6 @@
 				0341BC0C20C980EA0055BB26 /* Resources */,
 				0341BC3120C980EB0055BB26 /* Embed App Extensions */,
 				36241AC34E9D9717F427F0D7 /* Frameworks */,
-				42BE094B201DD49E31623B8E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -410,8 +407,6 @@
 				0341BC1620C980EB0055BB26 /* Sources */,
 				0341BC1720C980EB0055BB26 /* Frameworks */,
 				0341BC1820C980EB0055BB26 /* Resources */,
-				90AE604D591ED2B969A969DD /* [CP] Embed Pods Frameworks */,
-				5711B87FD306D0B9B35EA1DB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -556,28 +551,13 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2AB50317C8F5DC49C8DC356E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rainrideTests/Pods-rainrideTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2E429946E6DB380B6E25F0CE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-rainride/Pods-rainride-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-rainride/Pods-rainride-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -586,112 +566,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rainride/Pods-rainride-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		42BE094B201DD49E31623B8E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-watchApp/Pods-watchApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		564FA9C419AD63851F3178FC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rainrideUITests/Pods-rainrideUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5711B87FD306D0B9B35EA1DB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-watchApp Extension/Pods-watchApp Extension-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		90AE604D591ED2B969A969DD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-watchApp Extension/Pods-watchApp Extension-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ACF897737524DB9466B201C8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rainrideUITests/Pods-rainrideUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BF8FA9B9BDFC4F170529916E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rainride/Pods-rainride-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D934DD8964545A88A4A44116 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rainrideTests/Pods-rainrideTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rainride/Pods-rainride-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F5D06927F8D87CB5A1D8CCC5 /* [CP] Check Pods Manifest.lock */ = {
@@ -758,6 +633,7 @@
 				0341BC0B20C968510055BB26 /* SpeedViewController.swift in Sources */,
 				0341BBD420C862870055BB26 /* AppDelegate.swift in Sources */,
 				0341BC0920C968340055BB26 /* WeatherViewController.swift in Sources */,
+				0373EF26215EB76800FCEFB1 /* UsefulFunctions.swift in Sources */,
 				0341BBD720C862870055BB26 /* rainride.xcdatamodeld in Sources */,
 				0341BBD920C862870055BB26 /* MasterViewController.swift in Sources */,
 				0341BC0720C869330055BB26 /* ExitsViewController.swift in Sources */,
