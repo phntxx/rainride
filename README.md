@@ -1,10 +1,10 @@
 # rainride
 
-<center>
+<div align="center">
   :umbrella: <b>never get wet again</b> :umbrella:
   
   a project by bastian "phntxx" meissner
-</center>
+</div>
 
 <br>
 
