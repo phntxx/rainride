@@ -1,7 +1,7 @@
 # rainride
 
 <center>
-  :umbrella: **never get wet again** :umbrella:   
+  :umbrella: <b>never get wet again</b> :umbrella:\n   
   a project by bastian "phntxx" meissner
 </center>
 
@@ -21,10 +21,10 @@ Imagine you're driving down the motorway in your open-top convertible or your mo
 ## Screenshots
 
 <p float="left">
-  <img src = "screenshots/Main-Menu.png" width = "24.75%" />
-  <img src = "screenshots/Speed.png" width = "24.75%" />
-  <img src = "screenshots/Weather.png" width = "24.75%" />
-  <img src = "screenshots/Motorway.png" width = "24.75%" />
+  <img src = "screenshots/Main-Menu.png" width = "24%" />
+  <img src = "screenshots/Speed.png" width = "24%" />
+  <img src = "screenshots/Weather.png" width = "24%" />
+  <img src = "screenshots/Motorway.png" width = "24%" />
 </p>
 
 ---
