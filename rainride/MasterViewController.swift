@@ -13,7 +13,6 @@ import CoreLocation
 class MasterViewController: UITableViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var speedLabel: UILabel!
-    @IBOutlet weak var headingLabel: UILabel!
     @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet weak var exitLabel: UILabel!
 
@@ -35,37 +34,33 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
         
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showSpeed" {
-            let controller = (segue.destination as! UINavigationController).topViewController as! SpeedViewController
-            controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-            controller.navigationItem.leftItemsSupplementBackButton = true
-        } else if segue.identifier == "showExits" {
-            let controller = (segue.destination as! UINavigationController).topViewController as! ExitsViewController
-            controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-            controller.navigationItem.leftItemsSupplementBackButton = true
-        } else if segue.identifier == "showWeather" {
-            let controller = (segue.destination as! UINavigationController).topViewController as! WeatherViewController
-            controller.weatherData = self.weatherData
-            controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-            controller.navigationItem.leftItemsSupplementBackButton = true
+        if CLLocationManager.authorizationStatus() == .notDetermined {
+            locationManager.requestWhenInUseAuthorization()
+        } else if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            locationManager.startUpdatingLocation()
+        } else if CLLocationManager.authorizationStatus() == .denied {
+            self.createAlert()
         }
+
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         self.locValue = manager.location!.coordinate
+        
+        if let settings = loadSettings() {
+            
+            var unitFloat = 3.6
+            if (settings.speedUnit != "km/h") {
+                unitFloat = 2.23694
+            }
+            
+            self.speedLabel.text = "Speed: \(locations[0].speed * unitFloat) \(settings.speedUnit)"
+            
+        } else {
+            self.speedLabel.text = "\(locations[0].speed * 3.6) km/h"
+        }
+
         
         if self.token {
             self.token = !self.token
@@ -73,7 +68,7 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         }
         
     }
-
+    
     func updateData() {
         var temperatureUnit: String = "auto"
         if let settings = loadSettings () {
@@ -101,8 +96,42 @@ class MasterViewController: UITableViewController, CLLocationManagerDelegate {
         }).resume()
     }
 
+    func createAlert () {
+        let alert = UIAlertController(title: "Location Denied", message: "This app will not work without enabling location services. Please enable the location services for this app in the system settings.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            alert.dismiss(animated: true, completion: {
+                print("D0NE")
+            })
+        }))
+    }
+    
     func loadSettings() -> Settings?  {
         return NSKeyedUnarchiver.unarchiveObject(withFile: Settings.ArchiveURL.path) as? Settings
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showSpeed" {
+            let controller = (segue.destination as! UINavigationController).topViewController as! SpeedViewController
+            controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+            controller.navigationItem.leftItemsSupplementBackButton = true
+        } else if segue.identifier == "showExits" {
+            let controller = (segue.destination as! UINavigationController).topViewController as! ExitsViewController
+            controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+            controller.navigationItem.leftItemsSupplementBackButton = true
+        } else if segue.identifier == "showWeather" {
+            let controller = (segue.destination as! UINavigationController).topViewController as! WeatherViewController
+            controller.weatherData = self.weatherData
+            controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+            controller.navigationItem.leftItemsSupplementBackButton = true
+        }
     }
     
 }

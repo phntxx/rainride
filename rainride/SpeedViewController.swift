@@ -11,13 +11,15 @@ import Charts
 import CoreData
 import CoreLocation
 
-class SpeedViewController: UIViewController, CLLocationManagerDelegate {
+class SpeedViewController: UITableViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var speedLabel: UILabel!
     @IBOutlet weak var speedChart: LineChartView!
     
     var token : Int = 0
+    
     var locationManager : CLLocationManager! = CLLocationManager()
+    
     var speeds : [Double] = []
 
     var unitString: String = "km/h"

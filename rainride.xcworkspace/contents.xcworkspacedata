@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../../../Desktop/mapstogpx20180929_191903.gpx">
+   </FileRef>
+   <FileRef
       location = "group:rainride.xcodeproj">
    </FileRef>
    <FileRef

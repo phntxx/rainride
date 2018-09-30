@@ -31,9 +31,6 @@ class ExitsViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        
-        insertPins(locations: self.exitData as NSArray, title: "Exit")
-        insertPins(locations: self.restAreaData as NSArray, title: "Rest Area")
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,11 +59,13 @@ class ExitsViewController: UIViewController, CLLocationManagerDelegate, MKMapVie
             range = settings.range
         }
         
-        
         let exitURL = NSURL(string: "http://overpass-api.de/api/interpreter?data=[out:json];node[highway=motorway_junction](around:\(range * 1000),\(locValue.latitude),\(locValue.longitude));out%20meta;")
         self.getOverPassData(url: exitURL!, type: "exit")
         let restAreaURL = NSURL(string: "http://overpass-api.de/api/interpreter?data=[out:json];node[highway=rest_area](around:\(range * 1000),\(locValue.latitude),\(locValue.longitude));out%20meta;")
         self.getOverPassData(url: restAreaURL!, type: "restarea")
+        insertPins(locations: self.exitData as NSArray, title: "Exit")
+        insertPins(locations: self.restAreaData as NSArray, title: "Rest Area")
+        
     }
     
     func getOverPassData (url: NSURL, type: String) {
